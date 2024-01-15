@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+			$('#btnDivStyle').click(function(){
+				alert($('div').attr('class'));
+			});
+                
+			$('#btnPStyle').click(function(){
+				var style = $('p').prop('style');
+				alert(style.fontWeight); 
+			});
+
+		//	$('div').prop('class','yellowDiv');  
+
+            $('#HTMLbut').click(function(){
+				alert($('#mydiv').html()); 
+			});
+
+            $('#textbut').click(function(){
+				alert($('p').text()); 
+			});
+
+            $('#btnSubVal').click(function(){
+				alert($('input:Submit').val());  //display value of button 
+			});
+
+			$('#btnTxtVal').click(function(){
+				alert($('input:text').val());  //display value of textbox 
+			});
+
+			//set value of textbox to "Abhi"
+		//	$('input:text').val('Abhi'); 
+
+        });
+    </script>
+	<style>
+		.yellowDiv{
+			background-color:yellow;
+		    margin:5px 0 0 0;
+		}
+	</style>
+</head>
+<body>
+
+	<div> Hello </div>
+	<p style="font-size:16px;font-weight:bold"> This is first paragraph. </p>
+	<div id="mydiv"> Hii </div>
+
+	<p style="color:red"> This is second paragraph </p>
+
+
+    <div>
+		<label>Name:</label><input type="text"/>
+	</div>
+	<br>
+	<div>
+		<input type="submit" value="Save" />
+	</div>
+    <br>
+    <button id="btnDivStyle">Get div</button>
+	<button id="btnPStyle">Get p Style</button>
+    <button id="HTMLbut"> HTML Button </button>
+    <button id="textbut"> Text Button</button>
+
+    <button id="btnSubVal">Get button value</button>
+	<button id="btnTxtVal">Get textbox value</button>
+	
+	
+
+
+</body>
+</html>
